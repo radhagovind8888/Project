@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="{% static 'js/bootstrap.bundle.js' %}">
+    </script>
+    <script>
+        const collapseElementList = document.querySelectorAll('.collapse')
+        const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+    </script>
+    <script>
+        function f1()
+        {
+            console.log("You clicked me!!")
+            window.alert("Hey user!!")
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            sum = parseInt(a)+parseInt(b)
+            sub=parseInt(a)-parseInt(b)
+            div=parseInt(a)/parseInt(b)
+            mul=parseInt(a)*parseInt(b)
+            window.alert(sum)
+            document.getElementById("sp1").textContent=sum
+             document.getElementById("sp2").textContent=sub
+             document.getElementById("sp3").textContent=div
+             document.getElementById("sp4").textContent=mul
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Python</h1>
+    <hr />
+    <h2>Have a nice day</h2>
+    <h3>****ALL THE BEST****</h3>
+    <hr />
+    <button type="button" class="btn btn-outline-warning  btn-lg">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <hr />
+
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Button1
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button2
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+<hr />
+    <h1><b>11+3</b></h1>
+<script>
+    var a=11
+    var b=3
+    document.writeln("<h3>")
+    document.writeln("Sum ::: "+(a+b)+"<br />")
+    document.writeln("Sub ::: "+(a-b)+"<br />")
+    document.writeln("div ::: "+(a*b)+"<br />")
+    document.writeln("mul ::: "+(a/b)+"<br />")
+    {#document.writeln("Mod ::: "+(a%b)+"<br />")#}
+    document.writeln("</h3>")
+</script>
+<hr />
+    <h4>
+    <label>A value : </label> <input type="number" id="num1" />
+    <label>B value : </label> <input type="number" id="num2" />
+    <button type="button" class="btn btn-lg btn-danger" onclick="f1()">Add-Me</button>
+        <button type="button" class="btn btn-lg btn-danger" onclick="f2()">Sub-me</button>
+        <button type="button" class="btn btn-lg btn-danger" onclick="f3()">Div-me</button>
+        <button type="button" class="btn btn-lg btn-danger" onclick="f4()">Mul-Me</button>
+    <br />
+    Your Result(Addition) ::: <span id="sp1"></span>
+         Your Result(Subtraction) ::: <span id="sp2"></span>
+         Your Result(Division) ::: <span id="sp3"></span>
+         Your Result(Multiplication) ::: <span id="sp4"></span>
+    </h4>
+<hr />
+
+</body>
+</html>
